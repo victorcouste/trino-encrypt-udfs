@@ -46,9 +46,9 @@ Copy the **trino-encrypt-udfs-{version}** folder from **target** directory in yo
 
 Then you should find 2 new functions **encrypt** and **decrypt** if you list all available functions in your Trino server with **SHOW FUNCTIONS** SQL command:
 ``` 
-- "encrypt","varchar","varchar, varchar","scalar","true","UDF to encrypt a value with a given password"
+"encrypt","varchar","varchar, varchar","scalar","true","UDF to encrypt a value with a given password"
 
-- "decrypt","varchar","varchar, varchar","scalar","true","UDF to decrypt a value with a given password"
+"decrypt","varchar","varchar, varchar","scalar","true","UDF to decrypt a value with a given password"
 ``` 
 ## Usage
 
