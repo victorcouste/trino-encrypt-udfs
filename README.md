@@ -35,8 +35,8 @@ It will generate a **trino-encrypt-udfs-{version}.jar** and **trino-encrypt-udfs
 Copy the **trino-encrypt-udfs-{version}** folder from **target** directory in your Trino **plugin** directory and restart Trino server.
    
 ```bash
-% cp ./target/trino-encrypt-udfs-{version}/* trino-server-{version}/plugin/trino-encrypt-udfs-{version}
-% trino-server-{version}/bin/launcher restart
+% cp -R ./target/trino-encrypt-udfs-{version} <trino-server-folder>/plugin/trino-encrypt-udfs
+% <trino-server-folder>/bin/launcher restart
 ```
 
 Then you should find 2 new functions **encrypt** and **decrypt** if you list all available functions of your Trino server with **SHOW FUNCTIONS** SQL command:
@@ -49,7 +49,7 @@ Then you should find 2 new functions **encrypt** and **decrypt** if you list all
 
 With a local trino server and trino CLI you can test the UDFs with:
 ``` 
-%./trino --execute "SELECT encrypt('myvalue','mypassword')"
+%<trino-cli-folder>/trino --execute "SELECT encrypt('myvalue','mypassword')"
 ```
 
 SQL queries to use and test functions:
