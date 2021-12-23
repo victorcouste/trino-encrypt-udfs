@@ -71,7 +71,7 @@ Tests on a tpch table:
 ```
 "SELECT encrypt(name,'new_password') FROM tpch.sf1.region"
 ```
-To insert encrypted data in a table:
+To create a table with encrypted data:
 
 ```
 CREATE TABLE your_catalog.your_schema.region_encrypt AS SELECT encrypt(name,'new_password') FROM tpch.sf1.region
