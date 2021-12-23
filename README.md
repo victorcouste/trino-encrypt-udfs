@@ -6,9 +6,7 @@ Example of Trino UDFs Plugin to encrypt and decrypt values with a password.
 
 In [Trino](https://trino.io) you can create new Plugins by implementing interfaces and override methods defined by the [SPI](https://trino.io/docs/current/develop/spi-overview.html).
 
-Plugins can provide additional Connectors, Types, Functions and with this project we implement 2 new [SQL Functions](https://trino.io/docs/current/develop/functions.html) (or UDFs / User-Defined Functions).
-
-And these 2 functions are implemented to encrypt or decypt a value (from a column or not) with a password.
+Plugins can provide additional Connectors, Types, Functions and with this project we implement 2 new [SQL Functions](https://trino.io/docs/current/develop/functions.html) (or UDFs / User-Defined Functions) to encrypt or decrypt a value (from a column or not) with a password.
 
 The method used to encrypt a value is [PBE](http://www.crypto-it.net/eng/theory/pbe.html) (Password Based Encryption), a method where the encryption key (which is binary data) is derived from a password (string). PBE is using an encryption key generated from a password, random salt and number of iterations.
 Details on [Java implementation](https://www.javamex.com/tutorials/cryptography/password_based_encryption.shtml), we use the [PBEWithMD5AndDES](https://www.javamex.com/tutorials/cryptography/pbe_key_derivation.shtml) mode.
