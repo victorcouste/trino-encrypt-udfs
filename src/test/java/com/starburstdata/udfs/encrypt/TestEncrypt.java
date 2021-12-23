@@ -32,7 +32,7 @@ public class TestEncrypt
     @Test
     public void testEncrypt()
     {
-        assertFunction("encrypt('test','key')", VARCHAR, "V90xixLP0aY=");
-        assertFunction("decrypt('V90xixLP0aY=','key')", VARCHAR, "test");
+        assertFunction("encrypt('myvalue','mypassword')", VARCHAR, "/stEnUn+cUs=");
+        assertFunction("decrypt('/stEnUn+cUs=','mypassword')", VARCHAR, "myvalue");
     }
 }

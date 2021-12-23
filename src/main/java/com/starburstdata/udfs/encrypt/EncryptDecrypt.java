@@ -41,36 +41,36 @@ public final class EncryptDecrypt
     private EncryptDecrypt()
     {}
 
-    @Description("UDF to encrypt a value with a given key")
+    @Description("UDF to encrypt a value with a given password")
     @ScalarFunction("encrypt")
     @SqlType(VARCHAR)
     public static Slice encrypt(
                 @SqlNullable @SqlType(VARCHAR) Slice value,
-                @SqlType(VARCHAR) Slice key)
+                @SqlType(VARCHAR) Slice password)
     {
-        return utf8Slice(EncryptDecrypt.encrypt_str(value.toStringUtf8(), key.toStringUtf8()));
+        return utf8Slice(EncryptDecrypt.encrypt_str(value.toStringUtf8(), password.toStringUtf8()));
     }
 
-    @Description("UDF to decrypt a value with a given key")
+    @Description("UDF to decrypt a value with a given password")
     @ScalarFunction("decrypt")
     @SqlType(VARCHAR)
     public static Slice decrypt(
                 @SqlNullable @SqlType(VARCHAR) Slice value,
-                @SqlType(VARCHAR) Slice key)
+                @SqlType(VARCHAR) Slice password)
     {
-        return utf8Slice(EncryptDecrypt.decrypt_str(value.toStringUtf8(), key.toStringUtf8()));
+        return utf8Slice(EncryptDecrypt.decrypt_str(value.toStringUtf8(), password.toStringUtf8()));
     }
 
     //PBE stands for "Password Based Encryption", a method where the encryption key (which is binary data) is derived from a password (string).
     //PBE is using an encryption key generated from a password, random salt and number of iterations
 
-    private static String encrypt_str(String value, String key)
+    private static String encrypt_str(String value, String password)
     {
         try {
             SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBEWithMD5AndDES");
-            SecretKey secret = keyFactory.generateSecret(new PBEKeySpec(key.toCharArray()));
+            SecretKey key = keyFactory.generateSecret(new PBEKeySpec(password.toCharArray()));
             Cipher pbeCipher = Cipher.getInstance("PBEWithMD5AndDES");
-            pbeCipher.init(1, secret, new PBEParameterSpec(salt, 20));
+            pbeCipher.init(1, key, new PBEParameterSpec(salt, 20));
             return base64Encode(pbeCipher.doFinal(value.getBytes(StandardCharsets.UTF_8)));
         }
         catch (Throwable t) {
@@ -79,18 +79,18 @@ public final class EncryptDecrypt
         }
     }
 
-    private static String decrypt_str(String value, String key)
+    private static String decrypt_str(String value, String password)
     {
         try {
             SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBEWithMD5AndDES");
-            SecretKey secret = keyFactory.generateSecret(new PBEKeySpec(key.toCharArray()));
+            SecretKey key = keyFactory.generateSecret(new PBEKeySpec(password.toCharArray()));
             Cipher pbeCipher = Cipher.getInstance("PBEWithMD5AndDES");
-            pbeCipher.init(2, secret, new PBEParameterSpec(salt, 20));
+            pbeCipher.init(2, key, new PBEParameterSpec(salt, 20));
             return new String(pbeCipher.doFinal(base64Decode(value)), StandardCharsets.UTF_8);
         }
         catch (Throwable t) {
             //throw new TrinoException(GENERIC_INTERNAL_ERROR, t);
-            return "Wrong key for decryption";
+            return "Wrong password for decryption";
         }
     }
 
