@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<duplicate-finder-result version="1">
+    <project artifactId="trino-encrypt-udfs" groupId="io.trino" version="364" type="trino-plugin"/>
+    <configuration skip="false" quiet="false" checkCompileClasspath="true" checkRuntimeClasspath="true" checkTestClasspath="true" failBuildInCaseOfDifferentContentConflict="false" failBuildInCaseOfEqualContentConflict="false" failBuildInCaseOfConflict="true" printEqualFiles="false" preferLocal="true" includeBootClasspath="false" bootClasspathProperty="sun.boot.class.path" includePomProjects="false" useDefaultResourceIgnoreList="true" useDefaultClassIgnoreList="true" useResultFile="true" resultFileMinClasspathCount="2" resultFile="/Users/victor/product/UDF/trino-encrypt-udfs/target/duplicate-finder-result.xml">
+        <ignoredResourcePatterns>
+            <ignoredResourcePattern>.*\.html</ignoredResourcePattern>
+            <ignoredResourcePattern>META-INF/.*</ignoredResourcePattern>
+            <ignoredResourcePattern>about_files/.*</ignoredResourcePattern>
+            <ignoredResourcePattern>plugin\.properties</ignoredResourcePattern>
+            <ignoredResourcePattern>.*\.java</ignoredResourcePattern>
+            <ignoredResourcePattern>THIRD-PARTY</ignoredResourcePattern>
+        </ignoredResourcePatterns>
+        <ignoredClassPatterns/>
+        <conflictingDependencies>
+            <conflictingDependency currentProject="false" currentProjectIncluded="false" wildcard="false" bootClasspath="false">
+                <dependencies>
+                    <dependency artifactId="http-server" groupId="io.airlift" type="jar"/>
+                    <dependency artifactId="http-client" groupId="io.airlift" type="jar"/>
+                </dependencies>
+                <packages/>
+                <classes/>
+                <resources>
+                    <resource>jetty-logging.properties</resource>
+                </resources>
+                <resourcePatterns/>
+            </conflictingDependency>
+            <conflictingDependency currentProject="false" currentProjectIncluded="false" wildcard="false" bootClasspath="false">
+                <dependencies>
+                    <dependency artifactId="commons-beanutils" groupId="commons-beanutils" type="jar"/>
+                    <dependency artifactId="commons-beanutils-core" groupId="commons-beanutils" type="jar"/>
+                    <dependency artifactId="commons-collections" groupId="commons-collections" type="jar"/>
+                </dependencies>
+                <packages/>
+                <classes>
+                    <class>org.apache.commons.collections.BufferUnderflowException</class>
+                    <class>org.apache.commons.collections.Buffer</class>
+                    <class>org.apache.commons.collections.ArrayStack</class>
+                    <class>org.apache.commons.collections.FastHashMap</class>
+                </classes>
+                <resources/>
+                <resourcePatterns/>
+            </conflictingDependency>
+            <conflictingDependency currentProject="false" currentProjectIncluded="false" wildcard="false" bootClasspath="false">
+                <dependencies>
+                    <dependency artifactId="commons-beanutils" groupId="commons-beanutils" type="jar"/>
+                    <dependency artifactId="commons-beanutils-core" groupId="commons-beanutils" type="jar"/>
+                </dependencies>
+                <packages>
+                    <package>org.apache.commons.beanutils</package>
+                </packages>
+                <classes/>
+                <resources/>
+                <resourcePatterns/>
+            </conflictingDependency>
+        </conflictingDependencies>
+        <ignoredDependencies>
+            <dependency artifactId="jruby-complete" groupId="org.jruby" type="jar"/>
+        </ignoredDependencies>
+    </configuration>
+    <results>
+        <result name="compile" conflictState="no-conflict" failed="false">
+            <conflicts/>
+            <ignoredResourcePatterns>
+                <ignoredResourcePattern>^META-INF/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>^OSGI-INF/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>^licenses/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>.*license(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*notice(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*readme(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*changelog(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*third-party(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*package\.html$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*overview\.html$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*\.html</ignoredResourcePattern>
+                <ignoredResourcePattern>META-INF/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>about_files/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>plugin\.properties</ignoredResourcePattern>
+                <ignoredResourcePattern>.*\.java</ignoredResourcePattern>
+                <ignoredResourcePattern>THIRD-PARTY</ignoredResourcePattern>
+            </ignoredResourcePatterns>
+            <ignoredDirectoryPatterns>
+                <ignoredDirectoryPattern>^.git$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.svn$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.hg$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.bzr$</ignoredDirectoryPattern>
+            </ignoredDirectoryPatterns>
+            <ignoredClassPatterns>
+                <ignoredClassPattern>^(.*\.)?.*\$.*$</ignoredClassPattern>
+                <ignoredClassPattern>^(.*\.)?package-info$</ignoredClassPattern>
+                <ignoredClassPattern>^(.*\.)?module-info$</ignoredClassPattern>
+            </ignoredClassPatterns>
+            <classpathElements type="classes"/>
+            <classpathElements type="resources"/>
+        </result>
+        <result name="runtime" conflictState="no-conflict" failed="false">
+            <conflicts/>
+            <ignoredResourcePatterns>
+                <ignoredResourcePattern>^META-INF/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>^OSGI-INF/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>^licenses/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>.*license(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*notice(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*readme(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*changelog(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*third-party(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*package\.html$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*overview\.html$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*\.html</ignoredResourcePattern>
+                <ignoredResourcePattern>META-INF/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>about_files/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>plugin\.properties</ignoredResourcePattern>
+                <ignoredResourcePattern>.*\.java</ignoredResourcePattern>
+                <ignoredResourcePattern>THIRD-PARTY</ignoredResourcePattern>
+            </ignoredResourcePatterns>
+            <ignoredDirectoryPatterns>
+                <ignoredDirectoryPattern>^.git$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.svn$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.hg$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.bzr$</ignoredDirectoryPattern>
+            </ignoredDirectoryPatterns>
+            <ignoredClassPatterns>
+                <ignoredClassPattern>^(.*\.)?.*\$.*$</ignoredClassPattern>
+                <ignoredClassPattern>^(.*\.)?package-info$</ignoredClassPattern>
+                <ignoredClassPattern>^(.*\.)?module-info$</ignoredClassPattern>
+            </ignoredClassPatterns>
+            <classpathElements type="classes"/>
+            <classpathElements type="resources"/>
+        </result>
+        <result name="test" conflictState="no-conflict" failed="false">
+            <conflicts/>
+            <ignoredResourcePatterns>
+                <ignoredResourcePattern>^META-INF/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>^OSGI-INF/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>^licenses/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>.*license(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*notice(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*readme(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*changelog(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*third-party(\.txt)?$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*package\.html$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*overview\.html$</ignoredResourcePattern>
+                <ignoredResourcePattern>.*\.html</ignoredResourcePattern>
+                <ignoredResourcePattern>META-INF/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>about_files/.*</ignoredResourcePattern>
+                <ignoredResourcePattern>plugin\.properties</ignoredResourcePattern>
+                <ignoredResourcePattern>.*\.java</ignoredResourcePattern>
+                <ignoredResourcePattern>THIRD-PARTY</ignoredResourcePattern>
+            </ignoredResourcePatterns>
+            <ignoredDirectoryPatterns>
+                <ignoredDirectoryPattern>^.git$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.svn$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.hg$</ignoredDirectoryPattern>
+                <ignoredDirectoryPattern>^.bzr$</ignoredDirectoryPattern>
+            </ignoredDirectoryPatterns>
+            <ignoredClassPatterns>
+                <ignoredClassPattern>^(.*\.)?.*\$.*$</ignoredClassPattern>
+                <ignoredClassPattern>^(.*\.)?package-info$</ignoredClassPattern>
+                <ignoredClassPattern>^(.*\.)?module-info$</ignoredClassPattern>
+            </ignoredClassPatterns>
+            <classpathElements type="classes"/>
+            <classpathElements type="resources"/>
+        </result>
+    </results>
+</duplicate-finder-result>

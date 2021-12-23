@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<modernizer>
+    <violation>
+        <name>java/lang/Class.newInstance:()Ljava/lang/Object;</name>
+        <version>1.1</version>
+        <comment>Prefer Class.getConstructor().newInstance()</comment>
+    </violation>
+
+    <violation>
+        <name>java/lang/String."&lt;init&gt;":([B)V</name>
+        <version>1.1</version>
+        <comment>Prefer new String(byte[], Charset)</comment>
+    </violation>
+
+    <violation>
+        <name>java/lang/String.getBytes:()[B</name>
+        <version>1.1</version>
+        <comment>Prefer String.getBytes(Charset)</comment>
+    </violation>
+
+    <violation>
+        <name>java/lang/String.toLowerCase:()Ljava/lang/String;</name>
+        <version>1.1</version>
+        <comment>Prefer String.toLowerCase(java.util.Locale)</comment>
+    </violation>
+
+    <violation>
+        <name>com/google/common/primitives/Ints.checkedCast:(J)I</name>
+        <version>1.8</version>
+        <comment>Prefer Math.toIntExact(long)</comment>
+    </violation>
+
+    <violation>
+        <name>org/testng/Assert.assertEquals:(Ljava/lang/Iterable;Ljava/lang/Iterable;)V</name>
+        <version>1.8</version>
+        <comment>Use io.prestosql.testing.assertions.Assert.assertEquals due to TestNG #543</comment>
+    </violation>
+
+    <violation>
+        <name>org/testng/Assert.assertEquals:(Ljava/lang/Iterable;Ljava/lang/Iterable;Ljava/lang/String;)V</name>
+        <version>1.8</version>
+        <comment>Use io.trino.testing.assertions.Assert.assertEquals due to TestNG #543</comment>
+    </violation>
+
+    <violation>
+        <name>org/apache/hadoop/conf/Configuration."&lt;init&gt;":()V</name>
+        <version>1.1</version>
+        <comment>Prefer new Configuration(false)</comment>
+    </violation>
+</modernizer>
