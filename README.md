@@ -64,7 +64,7 @@ With last query you must get the message ``"Wrong password for decryption"``.
 
 Tests on a tpch table:
 ```
-"SELECT encrypt(name,'new_password') FROM tpch.sf1.region"
+SELECT encrypt(name,'new_password') FROM tpch.sf1.region
 ```
 To create a table with encrypted data:
 
