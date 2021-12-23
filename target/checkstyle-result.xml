@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<checkstyle version="8.41.1">
-<file name="/Users/victor/product/UDF/trino-encrypt-udfs/src/main/java/com/starburstdata/udfs/encrypt/UDFsPlugin.java">
-</file>
-<file name="/Users/victor/product/UDF/trino-encrypt-udfs/src/main/java/com/starburstdata/udfs/encrypt/EncryptDecrypt.java">
-</file>
-<file name="/Users/victor/product/UDF/trino-encrypt-udfs/src/test/java/com/starburstdata/udfs/encrypt/TestEncrypt.java">
-</file>
-</checkstyle>
