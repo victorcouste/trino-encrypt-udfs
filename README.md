@@ -36,6 +36,7 @@ Copy the **trino-encrypt-udfs-{version}** folder from **target** directory in yo
    
 ```bash
 % cp -R ./target/trino-encrypt-udfs-{version} <trino-server-folder>/plugin/trino-encrypt-udfs
+
 % <trino-server-folder>/bin/launcher restart
 ```
 
