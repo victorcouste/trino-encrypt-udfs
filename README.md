@@ -72,3 +72,5 @@ To create a table with encrypted data:
 ```
 CREATE TABLE your_catalog.your_schema.region_encrypt AS SELECT encrypt(name,'new_password') FROM tpch.sf1.region
 ```
+
+![Trino udfs queries](https://github.com/victorcouste/trino-encrypt-udfs/blob/main/queries.png?raw=true)
